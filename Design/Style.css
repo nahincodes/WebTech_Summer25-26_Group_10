@@ -1,0 +1,172 @@
+/* ============================================================
+   MediBook — Starter stylesheet
+   This is a light baseline so the pages look tidy for the demo.
+   Extend / restyle freely — all layout hooks (classes) are here.
+   ============================================================ */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eef2f7;
+    color: #212529;
+    line-height: 1.5;
+}
+
+/* ---------- header ---------- */
+.header {
+    background-color: #1e3a8a;
+    color: #ffffff;
+    padding: 18px 30px;
+    text-align: center;
+}
+.header h2 { font-size: 28px; }
+.header p  { font-size: 14px; opacity: 0.9; }
+
+/* ---------- top navigation ---------- */
+.topnav {
+    background-color: #4c6ef5;
+    overflow: hidden;
+    padding: 0 10px;
+}
+.topnav a {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 14px;
+    font-size: 14px;
+}
+.topnav a:hover { background-color: #3b5bdb; }
+.topnav a.right { float: right; background-color: #c92a2a; }
+
+/* ---------- main container ---------- */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+h1 { color: #1e3a8a; margin-bottom: 16px; }
+h3 { color: #343a40; margin: 20px 0 10px; }
+.lead { color: #495057; margin-bottom: 18px; }
+hr { border: none; border-top: 1px solid #dee2e6; margin: 24px 0; }
+
+/* ---------- forms ---------- */
+fieldset {
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    padding: 18px;
+    background-color: #f8f9fa;
+}
+legend { padding: 0 8px; font-weight: bold; color: #1e3a8a; }
+table td { padding: 8px 10px; vertical-align: middle; }
+label { font-weight: 600; }
+input[type=text], input[type=email], input[type=password],
+input[type=date], input[type=time], input[type=number],
+select, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.error { color: #c92a2a; font-size: 13px; }
+
+/* ---------- buttons ---------- */
+.btn {
+    display: inline-block;
+    background-color: #4c6ef5;
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 4px 4px 4px 0;
+}
+.btn:hover { background-color: #3b5bdb; }
+.btn.small { padding: 6px 12px; font-size: 13px; }
+.btn-alt { background-color: #2b8a3e; }
+.btn-alt:hover { background-color: #237032; }
+.btn-danger { background-color: #c92a2a; }
+.btn-danger:hover { background-color: #a51f1f; }
+.actions { margin: 16px 0; }
+
+/* ---------- dashboard cards ---------- */
+.cards { display: flex; flex-wrap: wrap; gap: 16px; }
+.card {
+    flex: 1 1 200px;
+    background-color: #f1f3f5;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 18px;
+    text-decoration: none;
+    color: #212529;
+}
+.card:hover { border-color: #4c6ef5; background-color: #eef2ff; }
+.card h3 { color: #1e3a8a; margin: 0 0 6px; }
+
+/* ---------- data tables ---------- */
+table.data { width: 100%; border-collapse: collapse; margin-top: 10px; }
+table.data th, table.data td {
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    text-align: left;
+}
+table.data th { background-color: #4c6ef5; color: #ffffff; }
+table.data tr:nth-child(even) { background-color: #f8f9fa; }
+
+/* ---------- status badges ---------- */
+.badge { padding: 3px 10px; border-radius: 12px; font-size: 12px; color: #fff; }
+.badge.ok   { background-color: #2b8a3e; }
+.badge.wait { background-color: #e8590c; }
+.badge.done { background-color: #1971c2; }
+
+/* ---------- stat cards ---------- */
+.stats { display: flex; flex-wrap: wrap; gap: 16px; }
+.stat {
+    flex: 1 1 150px;
+    background-color: #4c6ef5;
+    color: #fff;
+    border-radius: 8px;
+    padding: 18px;
+    text-align: center;
+}
+.stat .num { display: block; font-size: 30px; font-weight: bold; }
+.stat .label { font-size: 13px; opacity: 0.9; }
+
+/* ---------- appointment list (simple) ---------- */
+.appt-list { list-style: none; margin-top: 12px; }
+.appt-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-left: 4px solid #4c6ef5;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+}
+.appt-list .appt-main strong { color: #1e3a8a; }
+.appt-list .appt-meta { color: #495057; font-size: 13px; margin-top: 2px; }
+.appt-list .appt-side { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.empty { color: #868e96; font-style: italic; }
+
+/* ---------- footer ---------- */
+.footer {
+    background-color: #1e3a8a;
+    color: #c7d2fe;
+    text-align: center;
+    padding: 16px 20px;
+    margin-top: 40px;
+    font-size: 13px;
+}
+.footer p { margin: 2px 0; }
+.footer strong { color: #ffffff; }
+.badge.no { background-color: #868e96; }
